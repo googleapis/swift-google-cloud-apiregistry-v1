@@ -26,19 +26,19 @@ extension Clients {
   protocol CloudApiRegistryStub {
     func getMcpServer(
       request: GetMcpServerRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudApiregistryV1.McpServer
+    ) async throws -> GoogleCloudApiRegistryV1.McpServer
 
     func listMcpServers(
       request: ListMcpServersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudApiregistryV1.ListMcpServersResponse
+    ) async throws -> GoogleCloudApiRegistryV1.ListMcpServersResponse
 
     func getMcpTool(
       request: GetMcpToolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudApiregistryV1.McpTool
+    ) async throws -> GoogleCloudApiRegistryV1.McpTool
 
     func listMcpTools(
       request: ListMcpToolsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudApiregistryV1.ListMcpToolsResponse
+    ) async throws -> GoogleCloudApiRegistryV1.ListMcpToolsResponse
 
     func listLocations(
       request: GoogleCloudLocation.ListLocationsRequest, options: GoogleCloudGax.RequestOptions
@@ -59,7 +59,7 @@ extension Clients {
 
     public func getMcpServer(
       request: GetMcpServerRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudApiregistryV1.McpServer {
+    ) async throws -> GoogleCloudApiRegistryV1.McpServer {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -74,12 +74,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudApiregistryV1.McpServer.self, from: data)
+        GoogleCloudApiRegistryV1.McpServer.self, from: data)
     }
 
     public func listMcpServers(
       request: ListMcpServersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudApiregistryV1.ListMcpServersResponse {
+    ) async throws -> GoogleCloudApiRegistryV1.ListMcpServersResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -99,12 +99,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudApiregistryV1.ListMcpServersResponse.self, from: data)
+        GoogleCloudApiRegistryV1.ListMcpServersResponse.self, from: data)
     }
 
     public func getMcpTool(
       request: GetMcpToolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudApiregistryV1.McpTool {
+    ) async throws -> GoogleCloudApiRegistryV1.McpTool {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -119,12 +119,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudApiregistryV1.McpTool.self, from: data)
+        GoogleCloudApiRegistryV1.McpTool.self, from: data)
     }
 
     public func listMcpTools(
       request: ListMcpToolsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudApiregistryV1.ListMcpToolsResponse {
+    ) async throws -> GoogleCloudApiRegistryV1.ListMcpToolsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -144,7 +144,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudApiregistryV1.ListMcpToolsResponse.self, from: data)
+        GoogleCloudApiRegistryV1.ListMcpToolsResponse.self, from: data)
     }
 
     public func listLocations(

@@ -51,14 +51,14 @@ extension Clients {
 
     public func getMcpServer(
       request: GetMcpServerRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudApiregistryV1.McpServer {
+    ) async throws -> GoogleCloudApiRegistryV1.McpServer {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: GetMcpServerRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudApiregistryV1.McpServer
+            -> GoogleCloudApiRegistryV1.McpServer
           in
           return try await self.inner.getMcpServer(request: r, options: o)
         })
@@ -66,14 +66,14 @@ extension Clients {
 
     public func listMcpServers(
       request: ListMcpServersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudApiregistryV1.ListMcpServersResponse {
+    ) async throws -> GoogleCloudApiRegistryV1.ListMcpServersResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListMcpServersRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudApiregistryV1.ListMcpServersResponse
+            -> GoogleCloudApiRegistryV1.ListMcpServersResponse
           in
           return try await self.inner.listMcpServers(request: r, options: o)
         })
@@ -81,14 +81,14 @@ extension Clients {
 
     public func getMcpTool(
       request: GetMcpToolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudApiregistryV1.McpTool {
+    ) async throws -> GoogleCloudApiRegistryV1.McpTool {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: GetMcpToolRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudApiregistryV1.McpTool
+            -> GoogleCloudApiRegistryV1.McpTool
           in
           return try await self.inner.getMcpTool(request: r, options: o)
         })
@@ -96,14 +96,14 @@ extension Clients {
 
     public func listMcpTools(
       request: ListMcpToolsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudApiregistryV1.ListMcpToolsResponse {
+    ) async throws -> GoogleCloudApiRegistryV1.ListMcpToolsResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListMcpToolsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudApiregistryV1.ListMcpToolsResponse
+            -> GoogleCloudApiRegistryV1.ListMcpToolsResponse
           in
           return try await self.inner.listMcpTools(request: r, options: o)
         })
